@@ -13,8 +13,10 @@ public class EntryPoint
         BasicWeek BW = new BasicWeek();
         //Advanced Week call
         AdvancedWeek AW = new AdvancedWeek();
-        //Calculator
+        //Calculator call
         Calculator calc;
+        //Emoloyee cakk
+        Employee emp;
         
         
         //Start
@@ -88,7 +90,7 @@ public class EntryPoint
                 }
             }
             
-            //Advanced Week
+            //Calculator
             if (  numb == 3 && numb != 2 && numb != 1 && numb != 4)
             {
                 calc = new Calculator();
@@ -111,10 +113,10 @@ public class EntryPoint
                 }
             }
             
-            //Empployee
-            if ( numb == 4  )
+            //Employee
+            if ( numb == 4 && numb != 2 && numb != 1 && numb != 3)
             {
-                Employee emp = new Employee();
+                emp = new Employee();
                 System.out.println (emp.toString());
                 System.out.println ("Would you like to perform another operation? (y/n)");
                 s = letInp.nextLine();
