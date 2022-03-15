@@ -1,3 +1,6 @@
+package lab_6;
+
+import java.text.*;
 import java.util.Scanner;
 
 public class Employee {
@@ -6,18 +9,26 @@ public class Employee {
     private String lastName;
     private int age;
     private double salary;
+    DecimalFormat dcm = new DecimalFormat ("####.00");
 
     public Employee() {
         // Get user input
         Scanner scan = new Scanner(System.in);
-
-        /**
-         * Continue code here to ask for the first name, last name, age, and salary, IN THAT ORDER
-         */
+        
+        System.out.println ("Please input the employee’s first name:");
+        firstName = scan.nextLine();
+        System.out.println ("Please input the employee’s Last name:");
+        lastName = scan.nextLine();
+        System.out.println ("Please input the employee’s Age:");
+        age = scan.nextInt();
+        System.out.println ("Please input the employee’s Salary:");
+        salary = scan.nextDouble();
+        
 
     }
 
     public String toString() {
-        // insert logic for toString method
+       String s = "Employee information: " + firstName + " " + lastName + ", " + age + ", $" + dcm.format(salary) ;
+       return s;
     }
 }
